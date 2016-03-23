@@ -2,7 +2,6 @@
 library(plotly)
 library(shiny)
 
-source("global.R")
 
 shinyServer(function(input, output) {
   
@@ -21,9 +20,9 @@ shinyServer(function(input, output) {
                 y = lumina_goal, 
                 hoverinfo = "none", 
                 marker = list(color = "#FF0000", size = 8)) %>%
-      layout(annotations = list(x = success.year(model.fun(input)), 
+      layout(annotations = list(x = 2052), 
                                 y = lumina_goal, 
-                                text = floor(success.year(model.fun(input))), 
+                                text = "2052", 
                                 arrowhead = 0))
   )
 })
